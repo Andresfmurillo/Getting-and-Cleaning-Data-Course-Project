@@ -10,17 +10,17 @@ The six activities that each person performed
 6.LAYING
 
 
-tBodyAcc-mean()-X
-tBodyAcc-mean()-Y
-tBodyAcc-mean()-Z
-tBodyAcc-std()-X
-tBodyAcc-std()-Y
-tBodyAcc-std()-Z
-tBodyAcc-mad()-X
-tBodyAcc-mad()-Y
-tBodyAcc-mad()-Z
-tBodyAcc-max()-X
-1tBodyAcc-max()-Y
+1 tBodyAcc-mean()-X
+2 tBodyAcc-mean()-Y
+3 tBodyAcc-mean()-Z
+4 tBodyAcc-std()-X
+5 tBodyAcc-std()-Y
+6 tBodyAcc-std()-Z
+7 tBodyAcc-mad()-X
+8 tBodyAcc-mad()-Y
+9 tBodyAcc-mad()-Z
+10 tBodyAcc-max()-X
+11 tBodyAcc-max()-Y
 12 tBodyAcc-max()-Z
 13 tBodyAcc-min()-X
 14 tBodyAcc-min()-Y
@@ -30,7 +30,7 @@ tBodyAcc-max()-X
 18 tBodyAcc-energy()-Y
 19 tBodyAcc-energy()-Z
 20 tBodyAcc-iqr()-X
-2tBodyAcc-iqr()-Y
+21 tBodyAcc-iqr()-Y
 22 tBodyAcc-iqr()-Z
 23 tBodyAcc-entropy()-X
 24 tBodyAcc-entropy()-Y
@@ -40,7 +40,7 @@ tBodyAcc-max()-X
 28 tBodyAcc-arCoeff()-X,3
 29 tBodyAcc-arCoeff()-X,4
 30 tBodyAcc-arCoeff()-Y,1
-3tBodyAcc-arCoeff()-Y,2
+31 tBodyAcc-arCoeff()-Y,2
 32 tBodyAcc-arCoeff()-Y,3
 33 tBodyAcc-arCoeff()-Y,4
 34 tBodyAcc-arCoeff()-Z,1
@@ -90,7 +90,7 @@ tBodyAcc-max()-X
 78 tGravityAcc-correlation()-X,Y
 79 tGravityAcc-correlation()-X,Z
 80 tGravityAcc-correlation()-Y,Z
-8tBodyAccJerk-mean()-X
+81 tBodyAccJerk-mean()-X
 82 tBodyAccJerk-mean()-Y
 83 tBodyAccJerk-mean()-Z
 84 tBodyAccJerk-std()-X
@@ -100,7 +100,7 @@ tBodyAcc-max()-X
 88 tBodyAccJerk-mad()-Y
 89 tBodyAccJerk-mad()-Z
 90 tBodyAccJerk-max()-X
-9tBodyAccJerk-max()-Y
+91 tBodyAccJerk-max()-Y
 92 tBodyAccJerk-max()-Z
 93 tBodyAccJerk-min()-X
 94 tBodyAccJerk-min()-Y
@@ -110,7 +110,7 @@ tBodyAcc-max()-X
 98 tBodyAccJerk-energy()-Y
 99 tBodyAccJerk-energy()-Z
 100 tBodyAccJerk-iqr()-X
-10tBodyAccJerk-iqr()-Y
+101 tBodyAccJerk-iqr()-Y
 102 tBodyAccJerk-iqr()-Z
 103 tBodyAccJerk-entropy()-X
 104 tBodyAccJerk-entropy()-Y
@@ -120,7 +120,7 @@ tBodyAcc-max()-X
 108 tBodyAccJerk-arCoeff()-X,3
 109 tBodyAccJerk-arCoeff()-X,4
 110 tBodyAccJerk-arCoeff()-Y,1
-11tBodyAccJerk-arCoeff()-Y,2
+111 tBodyAccJerk-arCoeff()-Y,2
 112 tBodyAccJerk-arCoeff()-Y,3
 113 tBodyAccJerk-arCoeff()-Y,4
 114 tBodyAccJerk-arCoeff()-Z,1
@@ -130,7 +130,7 @@ tBodyAcc-max()-X
 118 tBodyAccJerk-correlation()-X,Y
 119 tBodyAccJerk-correlation()-X,Z
 120 tBodyAccJerk-correlation()-Y,Z
-12tBodyGyro-mean()-X
+121 tBodyGyro-mean()-X
 122 tBodyGyro-mean()-Y
 123 tBodyGyro-mean()-Z
 124 tBodyGyro-std()-X
@@ -140,7 +140,7 @@ tBodyAcc-max()-X
 128 tBodyGyro-mad()-Y
 129 tBodyGyro-mad()-Z
 130 tBodyGyro-max()-X
-13tBodyGyro-max()-Y
+131 tBodyGyro-max()-Y
 132 tBodyGyro-max()-Z
 133 tBodyGyro-min()-X
 134 tBodyGyro-min()-Y
@@ -150,7 +150,7 @@ tBodyAcc-max()-X
 138 tBodyGyro-energy()-Y
 139 tBodyGyro-energy()-Z
 140 tBodyGyro-iqr()-X
-14tBodyGyro-iqr()-Y
+141 tBodyGyro-iqr()-Y
 142 tBodyGyro-iqr()-Z
 143 tBodyGyro-entropy()-X
 144 tBodyGyro-entropy()-Y
@@ -160,7 +160,7 @@ tBodyAcc-max()-X
 148 tBodyGyro-arCoeff()-X,3
 149 tBodyGyro-arCoeff()-X,4
 150 tBodyGyro-arCoeff()-Y,1
-15tBodyGyro-arCoeff()-Y,2
+151 tBodyGyro-arCoeff()-Y,2
 152 tBodyGyro-arCoeff()-Y,3
 153 tBodyGyro-arCoeff()-Y,4
 154 tBodyGyro-arCoeff()-Z,1
@@ -170,7 +170,7 @@ tBodyAcc-max()-X
 158 tBodyGyro-correlation()-X,Y
 159 tBodyGyro-correlation()-X,Z
 160 tBodyGyro-correlation()-Y,Z
-16tBodyGyroJerk-mean()-X
+161 tBodyGyroJerk-mean()-X
 162 tBodyGyroJerk-mean()-Y
 163 tBodyGyroJerk-mean()-Z
 164 tBodyGyroJerk-std()-X
@@ -180,7 +180,7 @@ tBodyAcc-max()-X
 168 tBodyGyroJerk-mad()-Y
 169 tBodyGyroJerk-mad()-Z
 170 tBodyGyroJerk-max()-X
-17tBodyGyroJerk-max()-Y
+171 tBodyGyroJerk-max()-Y
 172 tBodyGyroJerk-max()-Z
 173 tBodyGyroJerk-min()-X
 174 tBodyGyroJerk-min()-Y
@@ -190,7 +190,7 @@ tBodyAcc-max()-X
 178 tBodyGyroJerk-energy()-Y
 179 tBodyGyroJerk-energy()-Z
 180 tBodyGyroJerk-iqr()-X
-18tBodyGyroJerk-iqr()-Y
+181 tBodyGyroJerk-iqr()-Y
 182 tBodyGyroJerk-iqr()-Z
 183 tBodyGyroJerk-entropy()-X
 184 tBodyGyroJerk-entropy()-Y
@@ -200,7 +200,7 @@ tBodyAcc-max()-X
 188 tBodyGyroJerk-arCoeff()-X,3
 189 tBodyGyroJerk-arCoeff()-X,4
 190 tBodyGyroJerk-arCoeff()-Y,1
-19tBodyGyroJerk-arCoeff()-Y,2
+191 tBodyGyroJerk-arCoeff()-Y,2
 192 tBodyGyroJerk-arCoeff()-Y,3
 193 tBodyGyroJerk-arCoeff()-Y,4
 194 tBodyGyroJerk-arCoeff()-Z,1
@@ -210,7 +210,7 @@ tBodyAcc-max()-X
 198 tBodyGyroJerk-correlation()-X,Y
 199 tBodyGyroJerk-correlation()-X,Z
 200 tBodyGyroJerk-correlation()-Y,Z
-20tBodyAccMag-mean()
+201 tBodyAccMag-mean()
 202 tBodyAccMag-std()
 203 tBodyAccMag-mad()
 204 tBodyAccMag-max()
@@ -220,7 +220,7 @@ tBodyAcc-max()-X
 208 tBodyAccMag-iqr()
 209 tBodyAccMag-entropy()
 210 tBodyAccMag-arCoeff()1
-21tBodyAccMag-arCoeff()2
+211 tBodyAccMag-arCoeff()2
 212 tBodyAccMag-arCoeff()3
 213 tBodyAccMag-arCoeff()4
 214 tGravityAccMag-mean()
@@ -240,7 +240,7 @@ tBodyAcc-max()-X
 228 tBodyAccJerkMag-std()
 229 tBodyAccJerkMag-mad()
 230 tBodyAccJerkMag-max()
-23tBodyAccJerkMag-min()
+231 tBodyAccJerkMag-min()
 232 tBodyAccJerkMag-sma()
 233 tBodyAccJerkMag-energy()
 234 tBodyAccJerkMag-iqr()
@@ -250,7 +250,7 @@ tBodyAcc-max()-X
 238 tBodyAccJerkMag-arCoeff()3
 239 tBodyAccJerkMag-arCoeff()4
 240 tBodyGyroMag-mean()
-24tBodyGyroMag-std()
+241 tBodyGyroMag-std()
 242 tBodyGyroMag-mad()
 243 tBodyGyroMag-max()
 244 tBodyGyroMag-min()
@@ -260,7 +260,7 @@ tBodyAcc-max()-X
 248 tBodyGyroMag-entropy()
 249 tBodyGyroMag-arCoeff()1
 250 tBodyGyroMag-arCoeff()2
-25tBodyGyroMag-arCoeff()3
+251 tBodyGyroMag-arCoeff()3
 252 tBodyGyroMag-arCoeff()4
 253 tBodyGyroJerkMag-mean()
 254 tBodyGyroJerkMag-std()
@@ -270,7 +270,7 @@ tBodyAcc-max()-X
 258 tBodyGyroJerkMag-sma()
 259 tBodyGyroJerkMag-energy()
 260 tBodyGyroJerkMag-iqr()
-26tBodyGyroJerkMag-entropy()
+261 tBodyGyroJerkMag-entropy()
 262 tBodyGyroJerkMag-arCoeff()1
 263 tBodyGyroJerkMag-arCoeff()2
 264 tBodyGyroJerkMag-arCoeff()3
