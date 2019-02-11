@@ -1,10 +1,10 @@
 ## Files in this repo
 
-README.md -- you are reading it right now
+README.md 
 
-CodeBook.md -- codebook describing variables, the data and transformations
+CodeBook.txt -- codebook describing variables, the data and transformations
 
-run_analysis.R -- actual R code
+run_analysis.R --  R code
 
 
 ## About this Data Set
