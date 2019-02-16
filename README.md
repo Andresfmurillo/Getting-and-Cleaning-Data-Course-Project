@@ -20,11 +20,11 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 There is a total of columns and 180 rows in this dataset. Each row contains the data for one activity for one person.
 The data contains 30 subjects with each subject being measured for 6 activities.
 
-## Identifiers in the dataset##
+# Identifiers in the dataset#
   1. subject = THe id of the subject that was tested.
   2. activitylabel = One of 6 acitvites that recordings were taken from and includes: 'WALKING', "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING" OR "LAYING".
 
-## The dataset includes the following variables#
+# The dataset includes the following variables#
 
 Variable names are stated in the columns with each column giving the data for a variable that was measured.
 
@@ -32,7 +32,7 @@ Variable names are stated in the columns with each column giving the data for a 
 -Columns ending in std() give the standard deviation of that acitvity for the subject.
 -Equipment used to obtain the data is specified in the middle of the name where 'Acc' refers to the accelerometer and 'Gyro' refers to the gyroscope. 
  
- Variables included: 
+Variables included: 
 1.activitylabel 
 2.subject 
 3.tBodyAcc-mean()-X
