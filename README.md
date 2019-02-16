@@ -33,12 +33,15 @@ Variable names are stated in the columns with each column giving the data for a 
 -Equipment used to obtain the data is specified in the middle of the name where 'Acc' refers to the accelerometer and 'Gyro' refers to the gyroscope. 
  
 Variables included: 
-#1.activitylabel 
-#2.subject 
-#3.tBodyAcc-mean()-X
-#4.tBodyAcc-mean()-Y 
-#5.tBodyAcc-mean()-Z 
-#6.tBodyAcc-std()-X 
+1.activitylabel 
+
+2.subject 
+
+3.tBodyAcc-mean()-X
+
+4.tBodyAcc-mean()-Y 
+5.tBodyAcc-mean()-Z 
+6.tBodyAcc-std()-X 
 7.tBodyAcc-std()-Y 
 8.tBodyAcc-std()-Z 
 9.tGravityAcc-mean()-X 
