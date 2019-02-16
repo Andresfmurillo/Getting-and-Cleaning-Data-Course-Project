@@ -30,36 +30,183 @@ The raw dataset included the following files:
 The six activities that each person performed
 
 1.WALKING
+
 2.WALKING_UPSTAIRS
+
 3.WALKING_DOWNSTAIRS
+
 4.SITTING
+
 5.STANDING
+
 6.LAYING
 
 
-###Measurements include: 
+# Codebook #
 
- [1] "tBodyAcc-mean()-X"                    "tBodyAcc-mean()-Y"                    "tBodyAcc-mean()-Z"                    "tGravityAcc-mean()-X"                 "tGravityAcc-mean()-Y"                
- [6] "tGravityAcc-mean()-Z"                 "tBodyAccJerk-mean()-X"                "tBodyAccJerk-mean()-Y"                "tBodyAccJerk-mean()-Z"                "tBodyGyro-mean()-X"                  
-[11] "tBodyGyro-mean()-Y"                   "tBodyGyro-mean()-Z"                   "tBodyGyroJerk-mean()-X"               "tBodyGyroJerk-mean()-Y"               "tBodyGyroJerk-mean()-Z"              
-[16] "tBodyAccMag-mean()"                   "tGravityAccMag-mean()"                "tBodyAccJerkMag-mean()"               "tBodyGyroMag-mean()"                  "tBodyGyroJerkMag-mean()"             
-[21] "fBodyAcc-mean()-X"                    "fBodyAcc-mean()-Y"                    "fBodyAcc-mean()-Z"                    "fBodyAcc-meanFreq()-X"                "fBodyAcc-meanFreq()-Y"               
-[26] "fBodyAcc-meanFreq()-Z"                "fBodyAccJerk-mean()-X"                "fBodyAccJerk-mean()-Y"                "fBodyAccJerk-mean()-Z"                "fBodyAccJerk-meanFreq()-X"           
-[31] "fBodyAccJerk-meanFreq()-Y"            "fBodyAccJerk-meanFreq()-Z"            "fBodyGyro-mean()-X"                   "fBodyGyro-mean()-Y"                   "fBodyGyro-mean()-Z"                  
-[36] "fBodyGyro-meanFreq()-X"               "fBodyGyro-meanFreq()-Y"               "fBodyGyro-meanFreq()-Z"               "fBodyAccMag-mean()"                   "fBodyAccMag-meanFreq()"              
-[41] "fBodyBodyAccJerkMag-mean()"           "fBodyBodyAccJerkMag-meanFreq()"       "fBodyBodyGyroMag-mean()"              "fBodyBodyGyroMag-meanFreq()"          "fBodyBodyGyroJerkMag-mean()"         
-[46] "fBodyBodyGyroJerkMag-meanFreq()"      "angle(tBodyAccMean,gravity)"          "angle(tBodyAccJerkMean),gravityMean)" "angle(tBodyGyroMean,gravityMean)"     "angle(tBodyGyroJerkMean,gravityMean)"
-[51] "angle(X,gravityMean)"                 "angle(Y,gravityMean)"                 "angle(Z,gravityMean)"                 "tBodyAcc-std()-X"                     "tBodyAcc-std()-Y"                    
-[56] "tBodyAcc-std()-Z"                     "tGravityAcc-std()-X"                  "tGravityAcc-std()-Y"                  "tGravityAcc-std()-Z"                  "tBodyAccJerk-std()-X"                
-[61] "tBodyAccJerk-std()-Y"                 "tBodyAccJerk-std()-Z"                 "tBodyGyro-std()-X"                    "tBodyGyro-std()-Y"                    "tBodyGyro-std()-Z"                   
-[66] "tBodyGyroJerk-std()-X"                "tBodyGyroJerk-std()-Y"                "tBodyGyroJerk-std()-Z"                "tBodyAccMag-std()"                    "tGravityAccMag-std()"                
-[71] "tBodyAccJerkMag-std()"                "tBodyGyroMag-std()"                   "tBodyGyroJerkMag-std()"               "fBodyAcc-std()-X"                     "fBodyAcc-std()-Y"                    
-[76] "fBodyAcc-std()-Z"                     "fBodyAccJerk-std()-X"                 "fBodyAccJerk-std()-Y"                 "fBodyAccJerk-std()-Z"                 "fBodyGyro-std()-X"                   
-[81] "fBodyGyro-std()-Y"                    "fBodyGyro-std()-Z"                    "fBodyAccMag-std()"                    "fBodyBodyAccJerkMag-std()"            "fBodyBodyGyroMag-std()"              
-[86] "fBodyBodyGyroJerkMag-std()" 
+There is a total of columns and 180 rows in this dataset. Each row contains the data for one activity for one person.
+The data contains 30 subjects with each subject being measured for 6 activities.
 
-##Data Cleaning
+Identifiers in the dataset
+
+  1. subject = THe id of the subject that was tested.
+  
+  2. activitylabel = One of 6 acitvites that recordings were taken from and includes: 'WALKING', "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING" OR "LAYING".
+
+# The dataset includes the following variables#
+
+Variable names are stated in the columns with each column giving the data for a variable that was measured.
+
+-Columns ending in mean() give the mean of that acitvity for the subject.
+
+-Columns ending in std() give the standard deviation of that acitvity for the subject.
+
+-Equipment used to obtain the data is specified in the middle of the name where 'Acc' refers to the accelerometer and 'Gyro' refers to the gyroscope. 
+ 
+# Variables included:
+
+1.activitylabel 
+
+2.subject 
+
+3.tBodyAcc-mean()-X
+
+4.tBodyAcc-mean()-Y
+
+5.tBodyAcc-mean()-Z 
+
+6.tBodyAcc-std()-X 
+
+7.tBodyAcc-std()-Y 
+
+8.tBodyAcc-std()-Z 
+
+9.tGravityAcc-mean()-X 
+
+10.tGravityAcc-mean()-Y 
+
+11.tGravityAcc-mean()-Z 
+
+12.tGravityAcc-std()-X 
+
+13.tGravityAcc-std()-Y 
+
+14.tGravityAcc-std()-Z 
+
+15.tBodyAccJerk-mean()-X 
+
+16.tBodyAccJerk-mean()-Y
+
+17.tBodyAccJerk-mean()-Z 
+
+18.tBodyAccJerk-std()-X
+
+19.tBodyAccJerk-std()-Y
+
+20.tBodyAccJerk-std()-Z
+
+21.tBodyGyro-mean()-X
+
+22.tBodyGyro-mean()-Y
+
+23.tBodyGyro-mean()-Z 
+
+24.tBodyGyro-std()-X 
+
+25.tBodyGyro-std()-Y 
+
+26.tBodyGyro-std()-Z 
+
+27.tBodyGyroJerk-mean()-X 
+
+28.tBodyGyroJerk-mean()-Y
+
+29.tBodyGyroJerk-mean()-Z
+
+30.tBodyGyroJerk-std()-X 
+
+31.tBodyGyroJerk-std()-Y 
+
+32.tBodyGyroJerk-std()-Z
+
+33.tBodyAccMag-mean()
+
+34.tBodyAccMag-std() 
+
+35.tGravityAccMag-mean() 
+
+36.tGravityAccMag-std() 
+
+37.tBodyAccJerkMag-mean()
+
+38.tBodyAccJerkMag-std()
+
+39.tBodyGyroMag-mean()
+
+40.tBodyGyroMag-std()
+
+41.tBodyGyroJerkMag-mean()
+
+42.tBodyGyroJerkMag-std()
+
+43.fBodyAcc-mean()-X 
+
+44.fBodyAcc-mean()-Y 
+
+45.fBodyAcc-mean()-Z
+
+46.fBodyAcc-std()-X
+
+47.fBodyAcc-std()-Y 
+
+48.fBodyAcc-std()-Z
+
+49.fBodyAccJerk-mean()-X 
+
+50.fBodyAccJerk-mean()-Y 
+
+51.fBodyAccJerk-mean()-Z 
+
+52.fBodyAccJerk-std()-X 
+
+53.fBodyAccJerk-std()-Y
+
+54.fBodyAccJerk-std()-Z
+
+55.fBodyGyro-mean()-X 
+
+56.fBodyGyro-mean()-Y 
+
+57.fBodyGyro-mean()-Z
+
+58.fBodyGyro-std()-X
+
+59.fBodyGyro-std()-Y
+
+60.fBodyGyro-std()-Z 
+
+61.fBodyAccMag-mean()
+
+62.fBodyAccMag-std()
+
+63.fBodyBodyAccJerkMag-mean()
+
+64.fBodyBodyAccJerkMag-std() 
+
+65.fBodyBodyGyroMag-mean() 
+
+66.fBodyBodyGyroMag-std()
+
+67.fBodyBodyGyroJerkMag-mean() 
+
+68.fBodyBodyGyroJerkMag-std()
+
+#Data Cleaning
+
 1. merge training and testing sets
+
 2. Extract fields containing data related to means and standard deviations 
+
 3. Add descriptive activity labels
+
 4. Create new dataset where rows are the average measurement for each field, for each subject and for each activity type
