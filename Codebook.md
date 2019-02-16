@@ -1,11 +1,16 @@
-For each record in the dataset it is provided: 
+# For each record in the dataset it is provided: 
+
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
+
 - Triaxial Angular velocity from the gyroscope. 
+
 - A 561-feature vector with time and frequency domain variables. 
+
 - Its activity label. 
+
 - An identifier of the subject who carried out the experiment.
 
-##List of Files
+## List of Files
 
 The raw dataset included the following files:
 
@@ -42,7 +47,7 @@ The six activities that each person performed
 6.LAYING
 
 
-# Codebook #
+# Codebook
 
 There is a total of columns and 180 rows in this dataset. Each row contains the data for one activity for one person.
 The data contains 30 subjects with each subject being measured for 6 activities.
@@ -201,7 +206,7 @@ Variable names are stated in the columns with each column giving the data for a 
 
 68.fBodyBodyGyroJerkMag-std()
 
-#Data Cleaning
+# Data Cleaning
 
 1. merge training and testing sets
 
