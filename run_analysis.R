@@ -48,7 +48,7 @@ mean_and_std2 <- merged_test_and_train[ , mean_and_std == TRUE]
 
 mean_std_activity_labels <- merge(mean_and_std2, activity_labels, by="activityId", all.x=TRUE)
 
-tidy_data <- aggregate(. ~subjectId + activityLabel, mean_std_activity_labels, mean)
-tidy_data <- tidy_data[order(tidy_data$subjectId, tidy_data$activityLabel),]
+tidy_data <- aggregate(. ~activityLabel + subjectId , mean_std_activity_labels, mean)
+tidy_data <- tidy_data[order(tidy_data$activityId, tidy_data$activityLabel),]
 
 write.table(tidy_data, "tidy_data.txt", row.name=FALSE)
