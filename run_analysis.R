@@ -1,5 +1,5 @@
 library(dplyr)
-
+library(data.table)
 
 # read training folder
 train_subjects <- read.table("subject_train.txt")
