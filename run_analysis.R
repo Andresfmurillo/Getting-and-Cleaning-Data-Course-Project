@@ -1,65 +1,54 @@
 library(dplyr)
 library(data.table)
 
-# read training folder
-train_subjects <- read.table("subject_train.txt")
-train_values <- read.table("X_train.txt")
-train_activity <- read.table("y_train.txt")
+# Read Activity, Features files and Test & Train Folders
 
-# read test folder
-test_subjects <- read.table("subject_test.txt")
-test_values <- read.table("X_test.txt")
-test_activity <- read.table("y_test.txt"))
+features <- read.table("UCI HAR Dataset/features.txt")
 
-# read features file
-features <- read.table("features.txt")
+activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
 
-# read activity labels file
-activities <- read.table("activity_labels.txt")
-colnames(activities) <- c("Id", "Label")
+## Test folder
+test_set <- read.table("UCI HAR Dataset/test/X_test.txt")
+labels_test <- read.table("UCI HAR Dataset/test/y_test.txt")
+subjects_test <- read.table("UCI HAR Dataset/test/subject_test.txt")
 
-# 1. Merge the train and test sets
+## Train Folder
+training_set <- read.table("UCI HAR Dataset/train/X_train.txt")
+labels_train <- read.table("UCI HAR Dataset/train/y_train.txt")
+subjects_train <- read.table("UCI HAR Dataset/train/subject_train.txt")
 
-# create single data table
-Activity <- rbind(cbind(train_subjects, train_values, train_activity),cbind(test_subjects, test_values, test_activity))
 
-# remove single data tables 
-rm(train_subjects, train_values, train_activity, test_subjects, test_values, test_activity)
+## Rename Activity labels 
+colnames(activity_labels) <- c("activityId", "activityLabel")
 
-# name columns
-colnames(Activity) <- c("subject", features[, 2], "activity")
+colnames(test_set) <- features[,2] 
+colnames(labels_test) <- "activityId"
+colnames(subjects_test) <- "subjectId"
 
-# 2. Extract mean and standard deviation 
+colnames(training_set) <- features[,2] 
+colnames(labels_train) <-"activityId"
+colnames(subjects_train) <- "subjectId"
 
-# select only the varibels, which we need according to their columns names
-Activity <- Activity[, grepl("subject|activity|mean|std", colnames(Activity))]
+# Merge the train and test sets to create one data set.
+merged_test <- cbind(test_set, labels_test, subjects_test)
+merged_train <- cbind(training_set, labels_train, subjects_train)
 
-# 3. Use descriptive activity to name the activities 
+merged_test_and_train <- rbind(merged_test, merged_train)
 
-Activity <- mutate(Activity,activity=factor(activity,levels = activities[,1],labels = activities[,2]))
+# Use descriptive activity names to name the activities in the data set
+column_names <- colnames(merged_test_and_train)
 
-# 4. Appropriately label the data set with descriptive variables
+# Tidy data set with the average of each variable for each activity and each subject
+mean_and_std <- (grepl("activityId" , column_names) | 
+                         grepl("subjectId" , column_names) | 
+                         grepl("mean.." , column_names) | 
+                         grepl("std.." , column_names) )
 
-# get column names
-Activity_col <- colnames(Activity)
+mean_and_std2 <- merged_test_and_train[ , mean_and_std == TRUE]
 
-# remove special characters
-Activity_col <- gsub("[\\(\\)-]", "", Activity_col)
-Activity_col <- gsub("^f", "frequencyDomain", Activity_col)
-Activity_col <- gsub("^t", "timeDomain", Activity_col)
-Activity_col <- gsub("Acc", "Accelerometer", Activity_col)
-Activity_col <- gsub("Gyro", "Gyroscope", Activity_col)
-Activity_col <- gsub("Mag", "Magnitude", Activity_col)
-Activity_col <- gsub("Freq", "Frequency", Activity_col)
-Activity_col <- gsub("mean", "Mean", Activity_col)
-Activity_col <- gsub("std", "StandardDeviation", Activity_col)
-Activity_col <- gsub("BodyBody", "Body", Activity_col)
+mean_std_activity_labels <- merge(mean_and_std2, activity_labels, by="activityId", all.x=TRUE)
 
-# replace the colnames 
-colnames(Activity) <- Activity_col
+tidy_data <- aggregate(. ~activityLabel + subjectId , mean_std_activity_labels, mean)
+tidy_data <- tidy_data[order(tidy_data$activityId, tidy_data$subjectId),]
 
-# 5. Create a second, independent tidy set with the average of each variable for each activity and each subject
-
-# group by subject and activity and summarise using mean
-Activity_means <- Activity %>% group_by(subject, activity) %>% summarise_all(funs(mean))
-write.table(Activity_means, "tidy_data.txt", row.names = FALSE, quote = FALSE)
+write.table(tidy_data, "tidy_data.txt", row.name=FALSE)
